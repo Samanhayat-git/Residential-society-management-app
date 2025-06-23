@@ -1,0 +1,31 @@
+<template>
+<lightning-card>
+<lightning-progress-indicator current-step={currentStep} type="base" has-error="true" variant="base">
+    <lightning-progress-step label="Step 1" value="1" onclick={handleClick}></lightning-progress-step>
+    <lightning-progress-step label="Step 2" value="2" onclick={handleClick}></lightning-progress-step>
+    <lightning-progress-step label="Step 3" value="3" onclick={handleClick}></lightning-progress-step>
+    </lightning-progress-indicator>
+
+    <template if:true={isstepOne}>
+    <h1><b>WELCOME TO SOCIETY MANAGEMENT APP PAGE</b></h1>
+    <c-smw></c-smw>
+</template>
+
+<template if:true={isstepTwo}>
+    <c-smaintainmemcallw></c-smaintainmemcallw>
+</template>
+<template if:true={isstepThree}>
+    <h1>THANK YOU ....VISITING OUR APP</h1>
+</template>
+<template if:true={isEnablePrev}>
+<lightning-button variant="brand" label="Back"  onclick={handleback} class="slds-m-left_x-small"></lightning-button>
+</template>
+<template if:true={isEnableNext}>
+
+<lightning-button variant="brand" label="Next"  onclick={handleNext} class="slds-m-left_x-small"></lightning-button>
+</template>
+<template if:true={isEnableFinish}>
+<lightning-button variant="brand" label="Finish"  onclick={handlefinish} class="slds-m-left_x-small"></lightning-button>
+</template>
+</lightning-card>
+</template>

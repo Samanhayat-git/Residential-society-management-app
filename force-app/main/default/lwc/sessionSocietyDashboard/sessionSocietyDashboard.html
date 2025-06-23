@@ -1,0 +1,29 @@
+<template>
+    <lightning-card class="slds-p-around_large">
+        <lightning-button variant="brand" label="Member Details" onclick={getMember} class="slds-p-around_large slds-align_absolute-center"></lightning-button>
+ <template if:true={showMember}>
+        <h1 class="slds-p-around_large slds-align_absolute-center dashboard-title"><b>Premium Society Dashboard</b></h1>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">  
+            <thead>
+                <tr>
+                    <th>Member Id</th>
+                    <th>Member Name</th>
+                    <th> Flat Number</th>
+                    <th>Total Maintenance Paid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={Members} for:item="member">
+                <tr key={member.Id}>
+                    <td>{member.Member_ID__c}</td>
+                    <td>{member.Name}</td>
+                    <td>{member.Flat_Number__c}</td>
+                    <td>{member.Total_Maintenance_Paid__c}</td>
+                </tr>
+            </template>
+            </tbody>
+
+        </table>
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+    <h1>WELCOME TO MEMBER APP PAGE</h1>
+    <lightning-record-edit-form
+    record-id={recordId}
+    object-api-name="Member__c" onsuccess={handleSuccess} onsubmit={handleSubmit}>
+
+<lightning-input-field field-name="Name"> </lightning-input-field>
+            <lightning-input-field field-name="Flat_Type__c"> </lightning-input-field>
+            <lightning-input-field field-name="Gender__c"></lightning-input-field>
+            <lightning-input-field field-name="Email_ID__c"></lightning-input-field>
+            <lightning-input-field field-name="Aadhaar_Number__c"></lightning-input-field>
+           <lightning-input-field field-name="PAN__c"></lightning-input-field>
+           <lightning-input-field field-name="Flat_Type__c"></lightning-input-field>
+           <div class="slds-m-top-large slds-grid slds-grid_align-absolute-center">
+           <lightning-button class="slds-var-m-top_small"  style= "margin-left:10px;" variant="brand" type="submit" label="Submit" name="submit" ></lightning-button>
+   
+</div>
+
+        </lightning-record-edit-form>
+</lightning-card>
+
+</template>

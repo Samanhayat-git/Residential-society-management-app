@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+      <lightning-record-edit-form record-id={recordId} object-api-name="Maintenance__c" 
+      onsuccess={handleSuccess} onsubmit={handleSubmit}>
+      <lightning-input-field field-name="Name"></lightning-input-field>
+      <lightning-input-field field-name="Amount__c"></lightning-input-field>
+      <lightning-input-field field-name="Amount_Paid__c"></lightning-input-field>
+      <lightning-input-field field-name="Member__c"></lightning-input-field>
+       <div class="slds-var-m-top_large slds-grid slds-grid_align-center slds-align-absolute-center">
+      <lightning-button variant="brand"  class="slds-var-m-top_small" style="margin: left 10px;" type="submit" label="Save"></lightning-button>
+  </div>
+  
+      </lightning-record-edit-form>
+    </lightning-card>  
+  </template>
